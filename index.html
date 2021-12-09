@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger counter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+    <h1>People entered :</h1>
+    <h2 id="cont-ele">0</h2>
+    <button onclick="increment()" style="background-color: red; color: white;">INCREMENT</button>
+    <button onclick="save()" style="background-color: green; color: white;">SAVE</button>
+    <p id="saveCount">previous entered :</p>
+    
+
+    <script>
+        countEl=document.getElementById("cont-ele");
+        saveEl=document.getElementById("saveCount");
+        
+        console.log(countEl)
+        
+        count=0;
+
+        function increment()
+        {
+            count+=1;
+            countEl.innerText=count;
+            console.log(countEl.innerText)
+        }
+       
+
+        function save()
+        {
+            let strSave = count + " -   ";
+            console.log(strSave)
+
+            saveEl.innerText+=strSave;
+            countEl.innerText=0;
+
+        }
+
+
+    </script>
+</body>
+
+   
+
+
+
+</html>
